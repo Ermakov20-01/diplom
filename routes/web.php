@@ -28,9 +28,12 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function (){
     Route::get('/', [AdminController::class, 'showAdmin'])->name('Admin');
 
     Route::get('/create/category', [AdminController::class, 'showCategory'])->name('showAdminCategory');
+    Route::post('/create/category', [AdminController::class, 'createCategory']);
 });
 
+//Корзина
 Route::get('/cart', [\App\Http\Controllers\CartController::class, 'showCart'])->name('showCart');
+Route::post('/cart', [\App\Http\Controllers\CartController::class, 'sendCart']);
 
 Route::get('/brand/{brand}', [PageController::class, 'showBrand'])->name('showBrand');
 

@@ -74,7 +74,7 @@
             </tr>
             </tbody>
         </table>
-        <form action="/profile/cart" class="mb-3" method="post">
+        <form action="/cart" class="mb-3" method="post">
             @csrf
             <input type="submit" class="btn btn-secondary" style="width: 100%;font-size: 18px; text-transform: uppercase;" value="Оформить заказ">
         </form>

@@ -28,19 +28,28 @@
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Название</th>
-                        <th scope="col">Описание</th>
-                        <th scope="col">Фотография До</th>
-                        <th scope="col">Фотография После</th>
-                        <th scope="col">Категория</th>
-                        <th scope="col">Статус</th>
                         <th scope="col">Пользователь</th>
+                        <th scope="col">Товары</th>
+                        <th scope="col">Статус</th>
                         <th scope="col">Операции</th>
                     </tr>
                     </thead>
-                    <tbody>
-
-                    </tbody>
+                    @foreach($applications as $application)
+                        <tbody>
+                        <th scope="row">{{$application->id}}</th>
+                        <th>{{$application->user->name}}</th>
+                        <th>
+                            @foreach($application->products as $product)
+                                <p>{{$product->title}} {{$product->pivot->count}}</p>
+                            @endforeach
+                        </th>
+                        <th>{{$application->status_id}}</th>
+                        <th>
+                            <a href="#">Редактировать</a>|
+                            <a href="#">Удалить</a>
+                        </th>
+                        </tbody>
+                    @endforeach
                 </table>
             </div>
             <div class="tab-pane fade" id="categories" role="tabpanel" aria-labelledby="categories-tab">

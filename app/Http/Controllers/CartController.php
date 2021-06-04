@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Application;
 use App\Models\Product;
+use App\Models\Applicaion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
@@ -15,7 +17,7 @@ class CartController extends Controller
         $cart = json_decode($request->cookie('cart'), true);
         $application = Application::create([
             'user_id' => Auth::user()->id,
-            'status_id' => 1,
+            'status_id' => 0,
         ]);
 
         $products = Product::whereIn('id', array_keys($cart))->get()->map(function ($product) use ($cart) {
@@ -25,7 +27,7 @@ class CartController extends Controller
         });
 
         foreach ($products as $product) {
-            $application->products()->attach($product->id, ['value' => $product['cart_count']]);
+            $application->products()->attach($product->id, ['count' => $product['cart_count']]);
         }
 
         Cookie::queue(Cookie::forget('cart'));
