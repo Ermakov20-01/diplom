@@ -1,0 +1,197 @@
+header {
+    background-color: #ffffff;
+}
+
+/*Шапка верхняя*/
+.header-top {
+    background-color: #ff8c00;
+}
+
+.header-top a {
+    color: white;
+    text-decoration: none;
+}
+
+main .container {
+    margin-top: 20px;
+}
+
+.btn-search {
+    background-color: #ff8c00;
+    color: white;
+}
+
+/*Каталог*/
+.catalog {
+    background-color: #ff8c00;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.catalog a {
+    text-decoration: none;
+    color: white;
+}
+
+.category {
+    margin-top: 10px;
+}
+
+/*Страница категории*/
+.category_container {
+    background-color: #ff8c00;
+    border-radius: 20px;
+    color: white;
+}
+
+/*Блок акций*/
+.sale {
+    background-color: #ff8c00;
+    padding-bottom: 155px;
+    border-radius: 5px;
+}
+
+/*Бренды слайдер*/
+.homepage-brands {
+    margin-top: 20px;
+    background-color: #ff8c00;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+.homepage-center {
+    margin-top: 30px;
+}
+
+
+/*Карточка товара*/
+
+.product {
+    background-color: #efefef;
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.image {
+    margin-bottom: 10px;
+}
+
+.image img {
+    margin-top: 10px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.info h3 {
+    font-size: 21px;
+}
+
+.info-price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8c00;
+}
+
+/*Табы*/
+.tabs {}
+.tabs-triggers{
+    display: flex;
+}
+.tabs-triggers__item{
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.tabs-triggers__item--active {
+    background-color: #eee;
+}
+
+.tabs-content{}
+.tabs-content__item{
+    display: none;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.tabs-content__item--active {
+    display: block;
+}
+/*Форма авторизации и регистрации*/
+
+.form-auth {
+    background-color: #ff8c00;
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+.form-auth a {
+    color: white;
+}
+
+.form-auth button {
+    background-color: #d47600;
+    color: white;
+}
+
+/* Слайдер */
+
+.slider__item {
+    text-align: center;
+}
+
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/*Подвал*/
+
+footer {
+    background-color: grey;
+}
